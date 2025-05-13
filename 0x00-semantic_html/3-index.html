@@ -2,29 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Accessible Form</title>
+  <title>Form Accessibility with ARIA</title>
 </head>
 <body>
   <main>
-    <!-- محتوى 2-index.html يفترض أن يكون هنا -->
-
-    <!-- النموذج الجديد لتعزيز الوصولية -->
+    <!-- Section جديدة داخل main -->
     <section>
-      <h2 id="form-title">Contact Us</h2>
+      <h2 id="form-title">Contact Form</h2>
       <form action="#" method="POST" aria-labelledby="form-title" role="form">
+        <!-- حقل الاسم -->
         <div>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" aria-required="true">
         </div>
+
+        <!-- حقل البريد الإلكتروني -->
         <div>
           <label for="email">Email:</label>
           <input type="text" id="email" name="email" aria-required="true">
         </div>
+
+        <!-- زر الإرسال -->
         <div>
           <button type="submit" aria-label="Submit the form">Submit</button>
         </div>
+
+        <!-- رسالة تنبيه ديناميكية -->
         <div aria-live="polite" role="alert">
-          <!-- مكان لرسائل التنبيه أو النجاح -->
+          <!-- سيتم عرض رسائل الخطأ أو النجاح هنا -->
         </div>
       </form>
     </section>
